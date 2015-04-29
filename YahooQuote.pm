@@ -1,7 +1,7 @@
 # perl -w
 #
 #    Copyright (C) 1998-2002, Dj Padzensky <djpadz@padz.net>
-#    Copyright (C) 2002-2010  Dirk Eddelbuettel <edd@debian.org>
+#    Copyright (C) 2002-2015  Dirk Eddelbuettel <edd@debian.org>
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -31,10 +31,11 @@ use vars qw($VERSION @EXPORT @ISA
 use HTTP::Request::Common;
 use Text::ParseWords;
 
-$VERSION = '0.24';
+$VERSION = '0.25';
 
 ## these variables govern what type of quote the modules is retrieving
 $QURLbase = "http://download.finance.yahoo.com/d/quotes.csvr?e=.csv&f=";
+$QURLbase = "http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=";
 $QURLformat = "snl1d1t1c1p2va2bapomwerr1dyj1x";	# default up to 0.19
 $QURLextended = "s7t8e7e8e9r6r7r5b4p6p5j4m3m4";	# new in 0.20
 $QURLrealtime = "b2b3k2k1c6m2j3"; # also new in 0.20
