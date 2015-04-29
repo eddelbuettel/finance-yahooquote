@@ -1,7 +1,7 @@
 #! /usr/bin/make -f
 #                                                       -*- makefile -*-
 # debian/rules file for the Debian/GNU Linux libfinance-yahooquote-perl package
-# Copyright (C) 1999 - 2010 by Dirk Eddelbuettel <edd@debian.org>
+# Copyright (C) 1999 - 2015 by Dirk Eddelbuettel <edd@debian.org>
 
 package	:= $(shell grep Package debian/control | sed 's/^Package: //')
 version	:= $(shell head -1 debian/changelog | \
@@ -35,7 +35,7 @@ srcdir  := ../../../progs/perl/finance-yahooquote
 ## reminder:
 ##    perl Makefile.PL
 ##    make dist 
-##    mv Finance-YahooQuote-*.tar.gz ..
+##    mv Finance-YahooQuote-*.tar.gz ..  
 ##    make clean
 
 build: build-stamp

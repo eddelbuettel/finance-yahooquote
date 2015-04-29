@@ -1,3 +1,10 @@
+finance-yahooquote (0.25) unstable; urgency=low
+
+  * New upstream version with a hot fix against a change at Yahoo! Finance
+    (with thanks to Nicola Chiapolini)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 29 Apr 2015 07:08:13 -0500
+
 finance-yahooquote (0.24) unstable; urgency=low
 
   * New upstream version with a lame fix for the fix in 0.23 and
