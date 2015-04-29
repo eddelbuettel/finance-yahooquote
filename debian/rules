@@ -1,0 +1,80 @@
+#! /usr/bin/make -f
+#                                                       -*- makefile -*-
+# debian/rules file for the Debian/GNU Linux libfinance-yahooquote-perl package
+# Copyright (C) 1999 - 2010 by Dirk Eddelbuettel <edd@debian.org>
+
+package	:= $(shell grep Package debian/control | sed 's/^Package: //')
+version	:= $(shell head -1 debian/changelog | \
+			perl -nle 'm/\S+\s+\((\S+)\)/ && print $$1')
+debtmp	:= $(CURDIR)/debian/$(package)
+debdoc	:= $(debtmp)/usr/share/doc/$(package)
+
+srcdir  := ../../../progs/perl/finance-yahooquote
+
+#export DH_VERBOSE=1
+
+#upstream: get-orig-source
+#get-orig-source:
+#	lynx http://www.cpan.org/authors/id/D/DJ/DJPADZ/
+
+update:
+	test -d $(srcdir)
+	cp -xaf	$(srcdir)/YahooQuote.pm 	\
+		$(srcdir)/yahooquote 		\
+		$(srcdir)/README 		\
+		$(srcdir)/Makefile.PL		\
+		$(srcdir)/MANIFEST		\
+		$(srcdir)/CHANGES.old		\
+		$(srcdir)/GNU-LICENSE		\
+		$(srcdir)/t			\
+		$(srcdir)/examples		.
+	cp -xaf debian/changelog ChangeLog
+	perl Makefile.PL
+	make dist
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	perl Makefile.PL INSTALLDIRS=vendor 
+	$(MAKE)
+	-fping finance.yahoo.com && $(MAKE) test
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	-test -f Makefile && $(MAKE) realclean
+	dh_clean
+
+binary-indep: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	$(MAKE) install PREFIX=$(debtmp)/usr
+	dh_perl	
+	dh_installdocs		README CHANGES.old
+	dh_installexamples	examples/*
+#	dh_installmenu
+#	dh_installinit
+#	dh_installcron
+#	dh_installmanpages
+#	dh_undocumented
+	dh_installchangelogs
+	dh_compress
+	dh_fixperms
+#	dh_suidregister
+	dh_installdeb
+	dh_gencontrol
+#	dh_md5sums
+	dh_builddeb
+
+binary-arch: build
+
+source diff:                                                                  
+	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary
+

@@ -1,0 +1,15 @@
+Source: finance-yahooquote
+Section: perl
+Priority: optional
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Standards-Version: 3.8.4
+Build-Depends: debhelper (>= 7.0.0)
+Build-Depends-Indep: libwww-perl, fping
+
+Package: libfinance-yahooquote-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}, libwww-perl, libhtml-parser-perl, perl-modules
+Description: Perl module for retrieving stock quotes from Yahoo! Finance
+ This is a Perl module to retrieve one or more quotes for stocks, mutual
+ funds, exchange rates, options, ... from Yahoo! Finance, covering most 
+ (if not all) of the global Yahoo! Finance sites.

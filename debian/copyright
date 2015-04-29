@@ -1,0 +1,23 @@
+This is the Debian GNU/Linux libio-stringy-perl version of the
+Finance-YahooQuote package by Dj Padzensky <djpadz@padz.net>.
+Finance-YahooQuote provides a Perl module to pull one or more stock quotes
+from Yahoo! Finance.
+
+This package was put together by Dirk Eddelbuettel <edd@debian.org>
+from sources obtained from 
+	http://www.padz.net/~djpadz/YahooQuote/
+
+The only change for the Debian package was the addition of the debian/
+files. The package was renamed (and converted to lowercase) to match the
+Debian Policy which aims at consistent names for Perl Module packages.
+
+Copyright (C) 1998-2002, Dj Padzensky <djpadz@padz.net>
+Copyright (C) 2002-2010  Dirk Eddelbuettel <edd@debian.org>
+
+License: GPL-2
+
+On a Debian GNU/Linux systems, the complete text of GNU General Public
+License (v2) can be found in the file /usr/share/common-licenses/GPL-2.
+
+
+
