@@ -1,7 +1,7 @@
 # Makefile for Yahoo.pm
 #
 #    Copyright (C) 1998, 1999, 2000 Dj Padzensky <djpadz@padz.net>
-#    Copyright (C) 2002 - 2007 Dirk Eddelbuettel <edd@debian.org>
+#    Copyright (C) 2002 - 2015      Dirk Eddelbuettel <edd@debian.org>
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by

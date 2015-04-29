@@ -17,20 +17,26 @@ srcdir  := ../../../progs/perl/finance-yahooquote
 #get-orig-source:
 #	lynx http://www.cpan.org/authors/id/D/DJ/DJPADZ/
 
-update:
-	test -d $(srcdir)
-	cp -xaf	$(srcdir)/YahooQuote.pm 	\
-		$(srcdir)/yahooquote 		\
-		$(srcdir)/README 		\
-		$(srcdir)/Makefile.PL		\
-		$(srcdir)/MANIFEST		\
-		$(srcdir)/CHANGES.old		\
-		$(srcdir)/GNU-LICENSE		\
-		$(srcdir)/t			\
-		$(srcdir)/examples		.
-	cp -xaf debian/changelog ChangeLog
-	perl Makefile.PL
-	make dist
+# update:
+# 	test -d $(srcdir)
+# 	cp -xaf	$(srcdir)/YahooQuote.pm 	\
+# 		$(srcdir)/yahooquote 		\
+# 		$(srcdir)/README 		\
+# 		$(srcdir)/Makefile.PL		\
+# 		$(srcdir)/MANIFEST		\
+# 		$(srcdir)/CHANGES.old		\
+# 		$(srcdir)/GNU-LICENSE		\
+# 		$(srcdir)/t			\
+# 		$(srcdir)/examples		.
+# 	cp -xaf debian/changelog ChangeLog
+# 	perl Makefile.PL
+# 	make dist
+
+## reminder:
+##    perl Makefile.PL
+##    make dist 
+##    mv Finance-YahooQuote-*.tar.gz ..
+##    make clean
 
 build: build-stamp
 build-stamp:
