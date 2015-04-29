@@ -9,7 +9,8 @@ $Finance::YahooQuote::TIMEOUT = 60;
 
 print "ok 1\n" if $quote[1] eq "INTL BUS MACHINE" 
     or $quote[1] eq "INTL BUSINESS MAC"
-    or $quote[1] eq "International Bus";
+    or $quote[1] eq "International Bus"
+    or $quote[1] eq "International Business Machines";
 
 $arrptr = getquote("IBM");
 @array = @{$arrptr->[0]};
