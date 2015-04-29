@@ -38,7 +38,9 @@ srcdir  := ../../../progs/perl/finance-yahooquote
 ##    mv Finance-YahooQuote-*.tar.gz ..  
 ##    make clean
 
-build: build-stamp
+build: build-arch build-indep
+build-indep: build-stamp
+build-arch: build-stamp
 build-stamp:
 	dh_testdir
 	perl Makefile.PL INSTALLDIRS=vendor 
@@ -53,12 +55,13 @@ clean:
 	-test -f Makefile && $(MAKE) realclean
 	dh_clean
 
-binary-indep: build
+binary-indep: binary-stamp
+binary-stamp:
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(MAKE) install PREFIX=$(debtmp)/usr
+	$(MAKE) install DESTDIR=$(debtmp)
 	dh_perl	
 	dh_installdocs		README CHANGES.old
 	dh_installexamples	examples/*
