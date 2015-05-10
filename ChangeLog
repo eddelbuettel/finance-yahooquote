@@ -1,3 +1,14 @@
+finance-yahooquote (0.26) unstable; urgency=low
+
+  [ unreleased ]
+
+  * README.md: Renamed from README and updated
+  * MANIFEST: Updated reference from README to README.md
+  * .travis.yml: Added
+  * YahooQuote.pm: Removed superfluous extra line
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sun, 10 May 2015 11:46:45 -0500
+
 finance-yahooquote (0.25) unstable; urgency=low
 
   * YahooQuote.pm: Applied patch by Nicola Chiapolini restoring
