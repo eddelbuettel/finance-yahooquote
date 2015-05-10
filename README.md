@@ -1,4 +1,4 @@
-## Finance::YahooQuote [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
+## Finance::YahooQuote [![Build Status](https://travis-ci.org/eddelbuettel/finance-yahooquote.svg)](https://travis-ci.org/eddelbuettel/finance-yahooquote) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
 
 Finance::YahooQuote is a Perl 5 module that will pull one or more stock quotes from
 [Yahoo! Finance](http://finance.yahoo.com). It was written by 
