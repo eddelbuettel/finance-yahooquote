@@ -3,7 +3,7 @@ CHANGES.old
 GNU-LICENSE
 MANIFEST
 Makefile.PL
-README
+README.md
 YahooQuote.pm
 yahooquote
 t/01base.t
