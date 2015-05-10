@@ -18,24 +18,24 @@ finance-yahooquote (0.23) unstable; urgency=low
   * New upstream version with a lame fix for an even lamer bug
     due to the Yahoo! changing what they send back for 'IBM' as
     the company name: updating this fixes regression test nb 2
-  
+
   * examples/fixyahoo.pl: Contributed function by Ray Gwinn that corrects
     output from the 'extended' format for embedded commas
 
   * debian/control: Updated Standards-Version: to 3.8.4
   * debian/rules: Updated DH_COMPAT to 7
   * debian/control: Now Build-Depends: debhelper (>= 7.0.0)
-  
+
  -- Dirk Eddelbuettel <edd@debian.org>  Thu, 25 Mar 2010 21:59:57 -0500
 
-finance-yahooquote (0.22) unstable; urgency=medium 
-  
+finance-yahooquote (0.22) unstable; urgency=medium
+
   * New upstream version with a semi-urgent fix for the change in
-    the data source URL at Yahoo! Finance that occurred today and 
+    the data source URL at Yahoo! Finance that occurred today and
     which breaks all prior versions.
   * YahooQuote.pm: Updated base of URL of csv interface
   * YahooQuote.pm, Makefile.PL: Updated copyright to 2007
-  
+
   * debian/control: Updated Standards-Version: to 3.7.2
   * debian/rules: Updated DH_COMPAT to 5
   * debian/control: Now Build-Depends: debhelper (>= 5.0.0)
@@ -51,9 +51,9 @@ finance-yahooquote (0.21.1) unstable; urgency=low
 
 finance-yahooquote (0.21) unstable; urgency=low
 
-  * t/02simple.t:Updated test for returned company name for symbol 'IBM' to 
+  * t/02simple.t:Updated test for returned company name for symbol 'IBM' to
     recognise the text currently returned by Yahoo! (Thanks, Paul Woods!)
-  * MANIFEST: Finally added files in t/ and examples/ directory, also 
+  * MANIFEST: Finally added files in t/ and examples/ directory, also
     added CHANGES (which is now a link to debian/changelog)
   * Make CRAN release via a proper 'make dist' and upload that tarball to CRAN;
     Debian continues to get the normal source tarball incl. all of debian/
@@ -105,18 +105,18 @@ finance-yahooquote (0.18) unstable; urgency=low
 
   * Code (as opposed to Debian packaging) changes:
 
-    - YahooQuote.pm: supports proxy and authentication proxy with new 
+    - YahooQuote.pm: supports proxy and authentication proxy with new
       (and exported) variables PROXY, PROXYUSER, PROXYPASSWD.
-  
+
     - yahooquote: expanded version of the old quote-test example, added
-      --verbose switch, POD documentaion and an example demonstrating 
+      --verbose switch, POD documentaion and an example demonstrating
       the global scope of Finance::YahooQuote.
-  
+
     - Makefile.PL: appropriate changes to support changes
-  
-    - examples/examine_server.sh: New script to examine different servers 
+
+    - examples/examine_server.sh: New script to examine different servers
       and URL strings to examine exactly what information is provided
-  
+
     - examples/symbol_alias.sh: New script to find aliases for numeric
       (i.e. cusip-like) stock symbols.
 
@@ -133,7 +133,7 @@ finance-yahooquote (0.17-2) unstable; urgency=low
   * debian/control: Added Build-Depends-Indep
   * debian/control: Upgraded to Debian Policy 3.5.0
   * debian/rules: Upgraded to newer Perl Policy
-  
+
  -- Dirk Eddelbuettel <edd@debian.org>  Fri, 12 Apr 2002 20:57:18 -0500
 
 finance-yahooquote (0.17-1) unstable; urgency=low
@@ -164,14 +164,14 @@ finance-yahooquote (0.12-1) unstable; urgency=low
 finance-yahooquote (0.11-5) frozen unstable; urgency=low
 
   * debian/rules: Fix perl path in examples/quote-test (Lintian error)
-  * YahooQuote.pm: Applied proxy firewall patch (Closes: #56052) 
-  
+  * YahooQuote.pm: Applied proxy firewall patch (Closes: #56052)
+
  -- Dirk Eddelbuettel <edd@debian.org>  Mon, 24 Jan 2000 19:53:50 -0500
 
 finance-yahooquote (0.11-4) unstable; urgency=low
 
   * debian/rules: Adapted to use /usr/share/ following the recommendation
-    on FHS transition from the Technical Committee 
+    on FHS transition from the Technical Committee
   * debian/rules: Test for debhelper >= 2.0.40 for FHS compliance
   * debian/control: Upgraded to Debian Policy 3.0.1
 
@@ -206,5 +206,3 @@ finance-yahooquote (0.09-1) unstable; urgency=low
   * Initial Debian release.
 
  -- Dirk Eddelbuettel <edd@debian.org>  Mon, 22 Mar 1999 20:25:18 -0500
-
-
