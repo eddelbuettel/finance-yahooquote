@@ -34,7 +34,8 @@ use Text::ParseWords;
 $VERSION = '0.25';
 
 ## these variables govern what type of quote the modules is retrieving
-$QURLbase = "http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=";
+# $QURLbase = "http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=";
+$QURLbase = "https://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=";
 $QURLformat = "snl1d1t1c1p2va2bapomwerr1dyj1x";	# default up to 0.19
 $QURLextended = "s7t8e7e8e9r6r7r5b4p6p5j4m3m4";	# new in 0.20
 $QURLrealtime = "b2b3k2k1c6m2j3"; # also new in 0.20
