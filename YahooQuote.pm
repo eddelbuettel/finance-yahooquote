@@ -31,7 +31,7 @@ use vars qw($VERSION @EXPORT @ISA
 use HTTP::Request::Common;
 use Text::ParseWords;
 
-$VERSION = '0.25';
+$VERSION = '0.26';
 
 ## these variables govern what type of quote the modules is retrieving
 # $QURLbase = "http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=";
@@ -256,6 +256,10 @@ Finance::YahooQuote - Get stock quotes from Yahoo! Finance
 			   ["Name","Book Value"]); # note array refs
 
 =head1 DESCRIPTION
+
+B<NOTE>: As of November 2017, the module is no longer all that useful
+as Yahoo! decided to halt the API service it relies on.
+
 
 This module gets stock quotes from Yahoo! Finance.  The B<getonequote>
 function will return a quote for a single stock symbol, while the

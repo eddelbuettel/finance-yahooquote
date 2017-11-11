@@ -1,6 +1,7 @@
 finance-yahooquote (0.26) unstable; urgency=low
 
-  [ unreleased ]
+  * README.md: In light of Yahoo! ceasing to support the API used by this
+    module, deactivated tests.
 
   * README.md: Renamed from README and updated
   * MANIFEST: Updated reference from README to README.md

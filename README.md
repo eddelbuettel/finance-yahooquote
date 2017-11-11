@@ -1,3 +1,4 @@
+
 ## Finance::YahooQuote [![Build Status](https://travis-ci.org/eddelbuettel/finance-yahooquote.svg)](https://travis-ci.org/eddelbuettel/finance-yahooquote) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
 
 Finance::YahooQuote is a Perl 5 module that will pull one or more stock quotes from
@@ -5,6 +6,12 @@ Finance::YahooQuote is a Perl 5 module that will pull one or more stock quotes f
 [Dj Padzensky](https://www.padz.net/wp/), and is now maintained by 
 [Dirk Eddelbuettel](http://dirk.eddelbuettel.com).  See the files 
 CHANGES.old for DJ's log of changes, and ChangeLog for changes since Dirk took over.
+
+### Yahoo! Status
+
+*Important Note:* As of November 2017, Yahoo! no longer support this interface, so
+the module ceases to be of any use or value.  An epic 20-year run has come to
+an end. Consider this repo to be of historic value only.
 
 ### CPAN
 
